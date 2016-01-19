@@ -1,0 +1,19 @@
+<ons-template id="home.html">
+    <ons-page fetch-data>
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button ng-click="menu.toggleMenu()">
+                  <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+                </ons-toolbar-button>
+            </div>
+            <div class="center">Title</div>            
+        </ons-toolbar>
+
+        <div>
+            <ul ng-repeat="package in packages">
+                <li>Name: {{ package.pkgName }}</li>
+                <li>Price: {{ package.pkgPrice }}</li>
+            </ul>
+        </div>
+    </ons-page>
+</ons-template>

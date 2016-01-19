@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="tourista">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>TourisTa</title>
+        
+        <link rel="stylesheet" type="text/css" href="lib/OnsenUI/css/onsenui.css">
+        <link rel="stylesheet" type="text/css" href="lib/OnsenUI/css/onsen-css-components.css">
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+        <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="lib/OnsenUI/js/onsenui.min.js"></script>   
+        <script type="text/javascript" src="lib/ng-cordova.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <script type="text/javascript" src="cordova.js"></script>                                                                                                                                                           
+    </head>
+    <body>
+        <section ui-template="templates/home.html"></section>
+
+        <ons-navigator var="navig">
+            <ons-page login>
+                <div class="navigation-bar navigation-bar--transparent">                   
+                    <div class="navigation-bar__center">
+                        Login
+                    </div>
+                </div>
+                
+                <div class="login-form">
+                    <input type="email" ng-model="user.email" class="text-input--underbar" placeholder="Email" value="">
+                    <input type="password" ng-model="user.password" class="text-input--underbar" placeholder="Password" value=""><br/><br/>
+                    <ons-button modifier="large" class="login-button" ng-click="userLogin( )">Log In</ons-button><br/>
+                    <ons-button modifier="large" class="login-button" ng-click="googleLogin( )">Login Via Google</ons-button>
+                </div>                
+            </ons-page>
+        </ons-navigator>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
